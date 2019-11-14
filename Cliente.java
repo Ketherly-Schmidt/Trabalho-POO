@@ -1,79 +1,77 @@
-package br.edu.imed;
+import javax.print.DocFlavor.CHAR_ARRAY;
 
-import java.util.Scanner;
-
+// CLASSE QUE GUARDA AS VARIAVEIS DOS OBJETOS...
 public class Cliente {
-	private String nomeCliente; 
-	private CupomDesconto id_Cupom;
-	private String cpf;
-	private String telefone;
+
+	private String nome;
+
+	private Double  senha ;
+
 	private String email;
-	private Endereco endereco;
-	private Double cartaoCredito;
+
+	private String endereco;
+
+	private Integer  telefone  ;
 	
-	public String getNomeCliente() {
-		return nomeCliente;
-	}
-	public void setNomeCliente(String nomeCliente) {
-		this.nomeCliente = nomeCliente;
+	
+	public Cliente() {
+
 	}
 
-	public Double getCartaoCredito() {
-		return cartaoCredito;
-	}
-	public void setCartaoCredito(Double cartaoCredito) {
-		this.cartaoCredito = cartaoCredito;
-	}
-	public String getCpf() {
-		return cpf;
-	}
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
+	public String getNome() {
+
+		return nome;
 	}
 
-	public CupomDesconto getId_Cupom() {
-		return id_Cupom;
+	public void setNome(String name) {
+
+		nome = name;
 	}
-	public void setId_Cupom(CupomDesconto id_Cupom) {
-		this.id_Cupom = id_Cupom;
-	}
-	public String getTelefone() {
-		return telefone;
-	}
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
-	}
+
 	public String getEmail() {
+
 		return email;
 	}
+
 	public void setEmail(String email) {
-		this.email = email;
+
+		email = email;
 	}
-	public Endereco getEndereco() {
+
+	public String getEndereco() {
+
 		return endereco;
 	}
-	public void setEndereco(Endereco endereco) {
-		this.endereco = endereco;
+
+	public void setEndereco(String Endereco) {
+
+		endereco = Endereco;
+
 	}
 
-	Scanner input = new Scanner (System.in);
-	
-	public void cadastroCliente() {
-		System.out.print("Informe seu nome: ");
-		this.setNomeCliente(input.next());
-		System.out.print("Informe seu CPF: ");
-		this.setCpf(input.next());
-		System.out.print("Informe seu telefone: ");
-		this.setTelefone(input.next());
-		System.out.print("Informe seu e-mail: ");
-		this.setEmail(input.next());
-		
-		System.out.println("-------------------------------------------------------------------------------- ");
-		System.out.println("Endereço do Cliente ");
-		Endereco end = new Endereco();
-		end.cadastroEnderecoCliente();
-		System.out.println("-------------------------------------------------------------------------------- ");
-		
+	public Integer getTelefone() {
+
+		return telefone;
 	}
+
+	public void setTelefone(Integer telefone) {
+
+		if (String.valueOf(telefone).length() > 11) {
+			//....
+		}
+		
+		this.telefone = telefone;
+
+	}
+
+	public double getSenha() {
+
+		return senha;
+	}
+
+	public void setSenha(double senha) {
+
+		senha = senha;
+	}
+
 }
-
