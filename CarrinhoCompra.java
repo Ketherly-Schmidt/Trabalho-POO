@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CarrinhoCompra {
+	
 	private Integer id_Carrinho;
 	private Integer quantidadeItens;
 	private Double subtotal = 0d; 
@@ -51,9 +52,13 @@ public class CarrinhoCompra {
 		return soma;
 	}
 	
-	public void listaCarrinho(){           
-        for(int i=0; i < listaProdutos.size(); i++){   
-            System.out.println("Produto: " + listaProdutos.get(i).getNomeProduto() + "\nCódigo:  " + listaProdutos.get(i).getCodProduto() + "\nDescrição: " + listaProdutos.get(i).getDescricao() + "\nPreço: R$" + listaProdutos.get(i).getPrecoUnidade() + "\n");   
-        }   
+	public void listaCarrinho(){ 
+		
+		for  (Produto p : listaProdutos) {
+					
+					System.out.println("Produto: " + p.getNomeProduto() + "\nCódigo:  " 
+				        	+ p.getCodProduto() + "\nDescrição: " + p.getDescricao() 
+				        	+ "\nPreço: R$" + p.getPrecoUnidade() + "\n");
+		}  
     }   	
 }   

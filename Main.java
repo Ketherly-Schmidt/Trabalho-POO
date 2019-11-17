@@ -17,7 +17,7 @@ package br.edu.imed;
 			execute = true;
 			listaCliente = new ArrayList<Cliente>();
 
-			System.out.println("BEM VINDO AO CADASTRO DE CLIENTE");
+			System.out.println("BEM-VINDO AO CADASTRO DE CLIENTE");
 
 			while (execute) {
 				String opcao = menu();

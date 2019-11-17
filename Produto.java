@@ -1,6 +1,7 @@
 package br.edu.imed;
 
 public class Produto {
+	
 	private Double codProduto;
 	private String nomeProduto;
 	private String descricao;
