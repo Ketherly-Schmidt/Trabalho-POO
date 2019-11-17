@@ -1,8 +1,7 @@
 package br.edu.imed;
 
 import java.util.*;
-
-import java.util.Scanner;
+import javax.print.DocFlavor.CHAR_ARRAY;
 
 public class Sistema {
 	
@@ -16,11 +15,9 @@ public class Sistema {
 		
 		Double ValorTotal = 0d;
 		
-		Main b = new Main();
+		Main sistema = new Main();
 		
-		//b.cadastrar();
-		//b.listarCadastros();
-		
+		Cliente cli = new Cliente();
 		
 		Empresa e1 = new Empresa();
 		e1.setNomeEmpresa ("The Geeks Lanches");
@@ -36,8 +33,9 @@ public class Sistema {
 		endEmpresa.setNumero(642);
 		endEmpresa.setCep("99050-073");
 		
+		
 		Comida pizzaCalabresa = new Comida();
-		pizzaCalabresa.setCodProduto(896d);
+		pizzaCalabresa.setCodProduto(8964d);
 		pizzaCalabresa.setNomeProduto("Pizza Calabresa");
 		pizzaCalabresa.setDescricao("Molho de tomate, queijo mussarela, calabresa, azeitona, oregano");
 		pizzaCalabresa.setTamanho("Familia");
@@ -46,16 +44,16 @@ public class Sistema {
 		comida.add(pizzaCalabresa);
 		
 		Comida pizzaFrangoCatupiry = new Comida();
-		pizzaCalabresa.setCodProduto(871d);
-		pizzaCalabresa.setNomeProduto("Pizza Frango com Catupiry");
-		pizzaCalabresa.setDescricao("Molho de tomate, frango, catupiry, oregano, queijo mussarela");
-		pizzaCalabresa.setTamanho("Familia");
-		pizzaCalabresa.setPrecoUnidade(75.0);
+		pizzaFrangoCatupiry.setCodProduto(8711d);
+		pizzaFrangoCatupiry.setNomeProduto("Pizza Frango com Catupiry");
+		pizzaFrangoCatupiry.setDescricao("Molho de tomate, frango, catupiry, oregano, queijo mussarela");
+		pizzaFrangoCatupiry.setTamanho("Familia");
+		pizzaFrangoCatupiry.setPrecoUnidade(75.0);
 		
 		comida.add(pizzaFrangoCatupiry);
 		
 		Comida hamburguerCarne = new Comida();
-		hamburguerCarne.setCodProduto(879d);
+		hamburguerCarne.setCodProduto(8794d);
 		hamburguerCarne.setNomeProduto("Hamburquer Americano");
 		hamburguerCarne.setDescricao("Carne moida, bacon, cebola, mussarela, presunto, champignon");
 		hamburguerCarne.setPrecoUnidade(22.0);
@@ -63,7 +61,7 @@ public class Sistema {
 		comida.add(hamburguerCarne);
 		
 		Comida hamburguerFrango = new Comida();
-		hamburguerFrango.setCodProduto(878d);
+		hamburguerFrango.setCodProduto(8784d);
 		hamburguerFrango.setNomeProduto("Hamburquer Americano de Frango");
 		hamburguerFrango.setDescricao("Frango, bacon, cebola, mussarela, presunto, champignon");
 		hamburguerFrango.setPrecoUnidade(25.0);
@@ -71,7 +69,7 @@ public class Sistema {
 		comida.add(hamburguerFrango);
 		
 		Comida batataFrita = new Comida();
-		batataFrita.setCodProduto(897d);
+		batataFrita.setCodProduto(8974d);
 		batataFrita.setNomeProduto("Batata Frita com cheddar");
 		batataFrita.setDescricao("Batata frita, cheddar");
 		batataFrita.setTamanho("Grande");
@@ -80,7 +78,7 @@ public class Sistema {
 		comida.add(batataFrita);
 		
 		Bebida refrigerante1 = new Bebida();
-		refrigerante1.setCodProduto(134d);
+		refrigerante1.setCodProduto(1348d);
 		refrigerante1.setNomeProduto("Coca-Cola");
 		refrigerante1.setDescricao("Refrigerante de cola, 600ml");
 		refrigerante1.setPrecoUnidade(7.0);
@@ -88,7 +86,7 @@ public class Sistema {
 		bebida.add(refrigerante1);
 		
 		Bebida refrigerante2 = new Bebida();
-		refrigerante2.setCodProduto(136d);
+		refrigerante2.setCodProduto(1367d);
 		refrigerante2.setNomeProduto("Guaraná Antarctica");
 		refrigerante2.setDescricao("Refrigerante guarana, 600ml");
 		refrigerante2.setPrecoUnidade(7.0);
@@ -96,7 +94,7 @@ public class Sistema {
 		bebida.add(refrigerante2);
 		
 		Bebida sucoLaranja = new Bebida();
-		sucoLaranja.setCodProduto(337d);
+		sucoLaranja.setCodProduto(33497d);
 		sucoLaranja.setNomeProduto("Suco de Laranja");
 		sucoLaranja.setDescricao("Suco de laranja natural, 300ml");
 		sucoLaranja.setPrecoUnidade(5.0);
@@ -104,7 +102,7 @@ public class Sistema {
 		bebida.add(sucoLaranja);
 		
 		Bebida sucoMorango = new Bebida();
-		sucoMorango.setCodProduto(947d);
+		sucoMorango.setCodProduto(9647d);
 		sucoMorango.setNomeProduto("Suco de Morango");
 		sucoMorango.setDescricao("Suco de morango natural, 300ml");
 		sucoMorango.setPrecoUnidade(5.0);
@@ -112,7 +110,7 @@ public class Sistema {
 		bebida.add(sucoMorango);
 		
 		Bebida cerveja = new Bebida();
-		cerveja.setCodProduto(334d);
+		cerveja.setCodProduto(3364d);
 		cerveja.setNomeProduto("Cerveja");
 		cerveja.setDescricao("Cerveja, 300ml");
 		cerveja.setPrecoUnidade(6.0);
@@ -120,7 +118,7 @@ public class Sistema {
 		bebida.add(cerveja);
 		
 		Bebida aguasemgas = new Bebida();
-		aguasemgas.setCodProduto(244d);
+		aguasemgas.setCodProduto(2474d);
 		aguasemgas.setNomeProduto("Agua mineral S/ gás");
 		aguasemgas.setDescricao("Agua mineral sem gás, 500ml");
 		aguasemgas.setPrecoUnidade(3.0);
@@ -128,7 +126,7 @@ public class Sistema {
 		bebida.add(aguasemgas);
 		
 		Bebida aguacomgas = new Bebida();
-		aguacomgas.setCodProduto(247d);
+		aguacomgas.setCodProduto(2647d);
 		aguacomgas.setNomeProduto("Agua mineral C/ gás");
 		aguacomgas.setDescricao("Agua mineral com gás, 500ml");
 		aguacomgas.setPrecoUnidade(3.5);
@@ -139,9 +137,8 @@ public class Sistema {
 		cc1.setId_Carrinho(254);
 		cc1.setQuantidadeItens(2);
 		cc1.setFrete(7.5d);
-		
-		//cc1.addListaProduto(sucoMorango);
-		//cc1.addListaProduto(hamburguerFrango);
+		cc1.addListaProduto(sucoMorango);
+		cc1.addListaProduto(hamburguerFrango);
 	
 		CupomDesconto cd1 = new CupomDesconto();
 		cd1.setId_Cupom(144);
@@ -160,9 +157,8 @@ public class Sistema {
 		
 		p1.addCupomDesconto(cd1);
 		p1.addCupomDesconto(cd2);
-		ValorTotal = p1.calculaTotal(cc1.calculaSubTotal(), cc1.getFrete());	
-		
-		
+		ValorTotal = p1.calculaTotal(cc1.calculaSubTotal(), cc1.getFrete());		
+				
 		Scanner in = new Scanner(System.in);
 		int opcao;
 		int resposta;
@@ -184,7 +180,7 @@ public class Sistema {
 			switch(opcao) {
 
 				case 1: 
-					b.menu();
+					sistema.menu();
 				case 2:
 					
 					System.out.println("ABAIXO VOCÊ CONFERE A LISTA DE COMIDAS DO CARDÁPIO");
@@ -197,25 +193,8 @@ public class Sistema {
 					
 					System.out.println("DIGITE 1 PARA RETORNAR AO MENU PRINCIPAL");
 					resposta = in.nextInt();
-					/*
-					System.out.print("DESEJA ADICIONAR ALGUM PRODUTO NO CARRINHO? \n 1 - SIM \n 2 - NAO ");
-					resposta = in.nextInt();
-					if (resposta == 1) {
-						
-						System.out.print("INFORME O CÓDIGO DO PRODUTO: ");
-						codigoProduto = in.nextInt();
-						
-						cc1.addListaProduto(hamburguerFrango);
-						break;
-
-					}
-					else {
-						
-						break;
-
-					}
-					*/
-
+					break;
+				
 				case 3: 
 				
 					System.out.println("ABAIXO VOCÊ CONFERE A LISTA DE BEBIDAS DO CARDÁPIO ");
@@ -228,6 +207,7 @@ public class Sistema {
 					
 					System.out.println("DIGITE 1 PARA RETORNAR AO MENU PRINCIPAL");
 					resposta = in.nextInt();
+					break;
 					
 				case 4: 
 					
@@ -235,10 +215,10 @@ public class Sistema {
 						
 						System.out.println("======== ADICIONAR PRODUTOS NO CARRINHO ========");
 						System.out.print("INFORME O CÓDIGO DO PRODUTO: ");
-						codigoProduto = in.nextInt();
+						//comida.get(input.nextDouble());
 						cc1.addListaProduto(sucoMorango);
 					
-						String continua = textInput("DESEJA ADICIONAR MAIS PRODUTOS NO CARRINHO (S/N) ?");
+						String continua = textInput("Confirmar cadastro (S/N) ?");
 						
 						if (continua.equalsIgnoreCase("N")) {
 							cadastrandoProduto = false;
@@ -252,8 +232,7 @@ public class Sistema {
 				case 5: 
 
 					System.out.println("======== DADOS DO CLIENTE  ========");
-					System.out.println("Nome do Cliente: "+ c1.getNomeCliente());
-					
+					System.out.println("Nome do Cliente: "+ cli.getNome());	
 					System.out.println("======== DESCRIÇÃO DO PEDIDO  ========");
 					System.out.println("Nome da empresa: "+ e1.getNomeEmpresa());
 					System.out.println("Id_Pedido: "+ p1.getId_Pedido());
@@ -277,5 +256,9 @@ public class Sistema {
 
 		} while(opcao != 0);
 		
+	}
+
+	private static String textInput(String string) {
+		return null;
 	}
 }

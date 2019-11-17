@@ -17,7 +17,7 @@ package br.edu.imed;
 			execute = true;
 			listaCliente = new ArrayList<Cliente>();
 
-			System.out.println("BEM-VINDO AO CADASTRO DE CLIENTE");
+			System.out.println("BEM VINDO AO CADASTRO DE CLIENTE");
 
 			while (execute) {
 				String opcao = menu();
@@ -106,9 +106,11 @@ package br.edu.imed;
 					cadastrando = false;
 				} else if (continua.equalsIgnoreCase("s")){
 					// se for s sai do if e volta para o inicio do while
+					break;
 				} else {
 					System.out.println("\nOpção inválida seu noob, eu vou sair só porque você não colabora !!! \n");
 					cadastrando = false;
+
 				}
 			}
 		}
