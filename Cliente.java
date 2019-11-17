@@ -1,4 +1,3 @@
-package br.edu.imed;
 import javax.print.DocFlavor.CHAR_ARRAY;
 
 // CLASSE QUE GUARDA AS VARIAVEIS DOS OBJETOS...
@@ -35,8 +34,7 @@ public class Cliente {
 	}
 
 	public void setEmail(String email) {
-
-		email = email;
+		this.email = email;
 	}
 
 	public String getEndereco() {
@@ -57,7 +55,7 @@ public class Cliente {
 
 	public void setTelefone(Integer telefone) {
 
-		if (String.valueOf(telefone).length() > 11) {
+		if (String.valueOf(telefone).length() == 11) {
 			//....
 		}
 		
