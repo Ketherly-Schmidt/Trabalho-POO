@@ -3,14 +3,22 @@ package br.edu.imed;
 import java.util.*;
 
 public class Sistema {
+	
+	
 	public static void main(String[] args) { 
-		
+	
 		Scanner input = new Scanner(System.in);
 		
 		List <Produto> comida = new ArrayList <Produto>();
 		List <Produto> bebida = new ArrayList <Produto>();
 		
 		Double ValorTotal = 0d;
+		
+		Main b = new Main();
+		b.menu();
+		b.cadastrar();
+		b.listarCadastros();
+		
 		
 		Empresa e1 = new Empresa();
 		e1.setNomeEmpresa ("The Geeks Lanches");

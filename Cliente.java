@@ -1,6 +1,7 @@
+package br.edu.imed;
 import javax.print.DocFlavor.CHAR_ARRAY;
 
-// CLASSE QUE GUARDA AS VARIAVEIS DOS OBJETOS...
+//CLASSE QUE GUARDA AS VARIAVEIS DOS OBJETOS...
 public class Cliente {
 
 	private String nome;
