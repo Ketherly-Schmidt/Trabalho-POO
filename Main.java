@@ -1,4 +1,4 @@
-
+package br.edu.imed;
 	// CLASSE DE CADASTRO DE USUARIOS...
 
 	import java.util.List;
@@ -11,11 +11,7 @@
 		private boolean execute;
 		private List<Cliente> listaCliente;
 
-		public static void main(String[] args) {
-			new Main();
-		}
-
-		private Main() {
+		public Main() {
 			l = new Scanner(System.in);
 			execute = true;
 			listaCliente = new ArrayList<Cliente>();
@@ -40,7 +36,7 @@
 			}
 		}
 
-		private String menu() {
+		public String menu() {
 			System.out.println("Selecione a opção:");
 			System.out.println("N - Cadastro");
 			System.out.println("L - Editar Cadastro");
@@ -48,7 +44,7 @@
 			return l.nextLine(); 
 		}
 
-		private void cadastrar() {
+		public void cadastrar() {
 			boolean cadastrando = true;
 
 			while (cadastrando) {
@@ -150,7 +146,7 @@
 			}
 		}
 
-		private void listarCadastros() {
+		public void listarCadastros() {
 			if (listaCliente.size() == 0) {
 				System.out.println("\nNão existem cadastros !!!\n");
 			} else {
@@ -170,7 +166,7 @@
 			}
 		}
 
-		private String textInput(String label) {
+		public String textInput(String label) {
 			System.out.println(label);
 			return l.nextLine();
 		}

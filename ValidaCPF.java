@@ -1,3 +1,5 @@
+package br.edu.imed;
+
 import java.util.InputMismatchException;
 
 public class ValidaCPF {

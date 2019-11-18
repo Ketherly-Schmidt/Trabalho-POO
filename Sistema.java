@@ -15,7 +15,6 @@ public class Sistema {
 		
 		Double ValorTotal = 0d;
 		
-		Main sistema = new Main();
 		
 		Cliente cli = new Cliente();
 		
@@ -180,6 +179,7 @@ public class Sistema {
 			switch(opcao) {
 
 				case 1: 
+					Main sistema = new Main();
 					sistema.menu();
 				case 2:
 					

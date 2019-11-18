@@ -1,3 +1,5 @@
+package br.edu.imed;
+
 // CLASSE QUE GUARDA AS VARIAVEIS DOS OBJETOS...
 public class Cliente {
 
