@@ -1,6 +1,5 @@
-package br.edu.imed;
 
-// CLASSE DE CADASTRO DE USUARIOS...
+	// CLASSE DE CADASTRO DE USUARIOS...
 
 	import java.util.List;
 	import java.util.Scanner;
@@ -12,7 +11,11 @@ package br.edu.imed;
 		private boolean execute;
 		private List<Cliente> listaCliente;
 
-		public Main() {
+		public static void main(String[] args) {
+			new Main();
+		}
+
+		private Main() {
 			l = new Scanner(System.in);
 			execute = true;
 			listaCliente = new ArrayList<Cliente>();
@@ -27,14 +30,17 @@ package br.edu.imed;
 				} else if (opcao.equalsIgnoreCase("l")) {
 					listarCadastros();
 				} else if (opcao.equalsIgnoreCase("x")) {
-					execute = false;
+					//execute = false;
+					System.out.println("Tchau");
+					System.exit(0);
+					
 				} else {
 					System.out.println("\nOpção Inválida  !!! \n");
 				}
 			}
 		}
 
-		public String menu() {
+		private String menu() {
 			System.out.println("Selecione a opção:");
 			System.out.println("N - Cadastro");
 			System.out.println("L - Editar Cadastro");
@@ -42,14 +48,14 @@ package br.edu.imed;
 			return l.nextLine(); 
 		}
 
-		public void cadastrar() {
+		private void cadastrar() {
 			boolean cadastrando = true;
 
 			while (cadastrando) {
 				System.out.println("Cadastro de Usuário");
 				Cliente novoCliente = new Cliente();
-				
-				
+
+               // validar o email 
 				boolean emailValido = false;
 				while ( emailValido == false) {
 					novoCliente.setEmail(textInput("Email: "));
@@ -59,7 +65,7 @@ package br.edu.imed;
 					for (int i = 0; i < listaCliente.size(); i++) {
 
 						Cliente clienteDoFor	=  listaCliente.get(i);
-						
+
 						if(clienteDoFor.getEmail().equals(novoCliente.getEmail())) { 
 							emailIgual = true;
 						}
@@ -73,14 +79,13 @@ package br.edu.imed;
 				
 								
 				novoCliente.setNome(textInput("Nome:"));
-				novoCliente.setSenha(Integer.parseInt(textInput("Senha: ")));
 				novoCliente.setEndereco(textInput("Endereço: "));
 				
-				// Fazer isso enquanto o while for verdadeiro 
+				// Vereficando se o Telefone é inteiro.Fazer isso enquanto o while for verdadeiro 
 				boolean telefoneValido = false;
 				while (telefoneValido == false){ //== comparação  {
 					try {
-						novoCliente.setTelefone(Integer.parseInt(textInput("Telefone: ")));
+						novoCliente.setTelefone(Long.parseLong(textInput("Telefone: (Formato: 55996142062) ")));
 						telefoneValido = true;
 					} catch (Exception e) {
 						// TODO: handle exception
@@ -88,9 +93,41 @@ package br.edu.imed;
 					}
 				}
 				
+				/// tratamento Senha //
+				boolean SenhaValido = false; 
+				while (SenhaValido == false){ // Enquanto ele for false continua dentro do while.
+					try {
+						novoCliente.setSenha(Long.parseLong(textInput("Senha (Somente números, entre 6 a 8 digitos ): ")));
+						SenhaValido = true; //Se ele for verdadeiro , ele sai do while, e continua o codigo .
+					} catch (Exception e) {
+						// TODO: handle exception
+						System.out.println("Senha Inválido");
+					}
+				}
 				
+				// 
+				boolean cpfValido = false;
+				while (cpfValido == false){ //== comparação  {
+					try {
+						novoCliente.setCPF(textInput("CPF: (somente números) "));
+						cpfValido = true;
+					} catch (Exception e) {
+						// TODO: handle exception
+						System.out.println("CPF Inválido");
+					}
+				}
 				
-			
+				boolean ccValido = false;
+				while (ccValido == false){ //== comparação  {
+					try {
+						novoCliente.setCartaoCredito(Long.parseLong(textInput("Cartão de crédito: (somente números) ")));
+						ccValido = true;
+					} catch (Exception e) {
+						// TODO: handle exception
+						System.out.println("Cartão de crédito Inválido");
+					}
+				}
+				
 				String cadastrar = textInput("Confirmar cadastro (S/N) ?");
 				if (cadastrar.equalsIgnoreCase("s")) {
 					System.out.println("Cadastro adicionado !!!");
@@ -106,16 +143,14 @@ package br.edu.imed;
 					cadastrando = false;
 				} else if (continua.equalsIgnoreCase("s")){
 					// se for s sai do if e volta para o inicio do while
-					break;
 				} else {
 					System.out.println("\nOpção inválida seu noob, eu vou sair só porque você não colabora !!! \n");
 					cadastrando = false;
-
 				}
 			}
 		}
 
-		public void listarCadastros() {
+		private void listarCadastros() {
 			if (listaCliente.size() == 0) {
 				System.out.println("\nNão existem cadastros !!!\n");
 			} else {
@@ -127,13 +162,15 @@ package br.edu.imed;
 					System.out.println("\tEmail: " + d.getEmail());
 					System.out.println("\tSenha: " + d.getSenha());
 					System.out.println("\tTelefone: " + d.getTelefone());
-					System.out.println("\tEndereco: " + d.getEndereco() + "\n");
+					System.out.println("\tEndereco: " + d.getEndereco());
+					System.out.println("\tCPF: " + d.getCPF());
+					System.out.println("\tCartão de Crédito: " + d.getCartaoCredito() + "\n");
 				}
 				System.out.println("\nFim da lista\n");
 			}
 		}
 
-		public String textInput(String label) {
+		private String textInput(String label) {
 			System.out.println(label);
 			return l.nextLine();
 		}

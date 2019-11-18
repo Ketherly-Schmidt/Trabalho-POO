@@ -1,20 +1,21 @@
-package br.edu.imed;
-import javax.print.DocFlavor.CHAR_ARRAY;
-
-//CLASSE QUE GUARDA AS VARIAVEIS DOS OBJETOS...
+// CLASSE QUE GUARDA AS VARIAVEIS DOS OBJETOS...
 public class Cliente {
 
 	private String nome;
 
-	private Double  senha ;
+	private Long senha ;
 
 	private String email;
 
 	private String endereco;
 
-	private Integer  telefone  ;
+	private Long telefone;
 	
+	private String CPF;
 	
+	private Long CartaoCredito;
+
+
 	public Cliente() {
 
 	}
@@ -26,7 +27,7 @@ public class Cliente {
 
 	public void setNome(String name) {
 
-		nome = name;
+		this.nome = name;
 	}
 
 	public String getEmail() {
@@ -45,33 +46,57 @@ public class Cliente {
 
 	public void setEndereco(String Endereco) {
 
-		endereco = Endereco;
+		this.endereco = Endereco;
 
 	}
 
-	public Integer getTelefone() {
+	public Long getTelefone() {
 
 		return telefone;
 	}
 
-	public void setTelefone(Integer telefone) {
-
+	public void setTelefone(Long telefone) {
 		if (String.valueOf(telefone).length() == 11) {
-			//....
+			this.telefone = telefone;
 		}
-		
-		this.telefone = telefone;
+		else {
+			throw new ArithmeticException("criar erro"); //criar um erro 
+		}
 
 	}
 
 	public double getSenha() {
 
-		return senha;
+		return this.senha;
+
 	}
 
-	public void setSenha(double senha) {
+	public void setSenha(Long novaSenha) {
+		if (novaSenha.toString().length() >= 6 && novaSenha.toString().length() <= 8 ) {
+			this.senha = novaSenha;	
+		}else {
+			throw new ArithmeticException("criar erro"); //criar um erro 
+		}
+	}
 
-		senha = senha;
+	public String getCPF() {
+		return CPF;
+	}
+
+	public void setCPF(String cPF) {
+		if (ValidaCPF.isCPF(cPF) == true) {
+			this.CPF = cPF;
+		}else {
+			throw new ArithmeticException("criar erro"); //criar um erro 
+		}
+	}
+
+	public Long getCartaoCredito() {
+		return CartaoCredito;
+	}
+
+	public void setCartaoCredito(Long cartaoCredito) {
+		CartaoCredito = cartaoCredito;
 	}
 
 }
