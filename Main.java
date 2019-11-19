@@ -1,5 +1,6 @@
+package br.edu.imed;
 
-	// CLASSE DE CADASTRO DE USUARIOS...
+//CLASSE DE CADASTRO DE USUARIOS...
 
 	import java.util.List;
 	import java.util.Scanner;
@@ -30,7 +31,7 @@
 				} else if (opcao.equalsIgnoreCase("2")) {
 					listarCadastros();
 				} else if (opcao.equalsIgnoreCase("3")) {
-					System.out.println("OPÇÃO INVÁLIDA. TENTE NOVAMENTE. ");
+					System.out.println(" ");
 					//System.exit(0);
 					break;
 					
@@ -175,4 +176,3 @@
 			return l.nextLine();
 		}
 	}
-
