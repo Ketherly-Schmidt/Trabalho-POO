@@ -34,7 +34,7 @@ public class Sistema {
 		
 		
 		Comida pizzaCalabresa = new Comida();
-		pizzaCalabresa.setCodProduto(8964d);
+		pizzaCalabresa.setCodProduto(89d);
 		pizzaCalabresa.setNomeProduto("Pizza Calabresa");
 		pizzaCalabresa.setDescricao("Molho de tomate, queijo mussarela, calabresa, azeitona, oregano");
 		pizzaCalabresa.setTamanho("Familia");
@@ -43,7 +43,7 @@ public class Sistema {
 		comida.add(pizzaCalabresa);
 		
 		Comida pizzaFrangoCatupiry = new Comida();
-		pizzaFrangoCatupiry.setCodProduto(8711d);
+		pizzaFrangoCatupiry.setCodProduto(87d);
 		pizzaFrangoCatupiry.setNomeProduto("Pizza Frango com Catupiry");
 		pizzaFrangoCatupiry.setDescricao("Molho de tomate, frango, catupiry, oregano, queijo mussarela");
 		pizzaFrangoCatupiry.setTamanho("Familia");
@@ -52,7 +52,7 @@ public class Sistema {
 		comida.add(pizzaFrangoCatupiry);
 		
 		Comida hamburguerCarne = new Comida();
-		hamburguerCarne.setCodProduto(8794d);
+		hamburguerCarne.setCodProduto(84d);
 		hamburguerCarne.setNomeProduto("Hamburquer Americano");
 		hamburguerCarne.setDescricao("Carne moida, bacon, cebola, mussarela, presunto, champignon");
 		hamburguerCarne.setPrecoUnidade(22.0);
@@ -60,7 +60,7 @@ public class Sistema {
 		comida.add(hamburguerCarne);
 		
 		Comida hamburguerFrango = new Comida();
-		hamburguerFrango.setCodProduto(8784d);
+		hamburguerFrango.setCodProduto(78d);
 		hamburguerFrango.setNomeProduto("Hamburquer Americano de Frango");
 		hamburguerFrango.setDescricao("Frango, bacon, cebola, mussarela, presunto, champignon");
 		hamburguerFrango.setPrecoUnidade(25.0);
@@ -68,7 +68,7 @@ public class Sistema {
 		comida.add(hamburguerFrango);
 		
 		Comida batataFrita = new Comida();
-		batataFrita.setCodProduto(8974d);
+		batataFrita.setCodProduto(97d);
 		batataFrita.setNomeProduto("Batata Frita com cheddar");
 		batataFrita.setDescricao("Batata frita, cheddar");
 		batataFrita.setTamanho("Grande");
@@ -77,7 +77,7 @@ public class Sistema {
 		comida.add(batataFrita);
 		
 		Bebida refrigerante1 = new Bebida();
-		refrigerante1.setCodProduto(1348d);
+		refrigerante1.setCodProduto(13d);
 		refrigerante1.setNomeProduto("Coca-Cola");
 		refrigerante1.setDescricao("Refrigerante de cola, 600ml");
 		refrigerante1.setPrecoUnidade(7.0);
@@ -85,15 +85,15 @@ public class Sistema {
 		bebida.add(refrigerante1);
 		
 		Bebida refrigerante2 = new Bebida();
-		refrigerante2.setCodProduto(1367d);
-		refrigerante2.setNomeProduto("Guaran· Antarctica");
+		refrigerante2.setCodProduto(16d);
+		refrigerante2.setNomeProduto("Guaran√° Antarctica");
 		refrigerante2.setDescricao("Refrigerante guarana, 600ml");
 		refrigerante2.setPrecoUnidade(7.0);
 		
 		bebida.add(refrigerante2);
 		
 		Bebida sucoLaranja = new Bebida();
-		sucoLaranja.setCodProduto(33497d);
+		sucoLaranja.setCodProduto(33d);
 		sucoLaranja.setNomeProduto("Suco de Laranja");
 		sucoLaranja.setDescricao("Suco de laranja natural, 300ml");
 		sucoLaranja.setPrecoUnidade(5.0);
@@ -101,7 +101,7 @@ public class Sistema {
 		bebida.add(sucoLaranja);
 		
 		Bebida sucoMorango = new Bebida();
-		sucoMorango.setCodProduto(9647d);
+		sucoMorango.setCodProduto(94d);
 		sucoMorango.setNomeProduto("Suco de Morango");
 		sucoMorango.setDescricao("Suco de morango natural, 300ml");
 		sucoMorango.setPrecoUnidade(5.0);
@@ -109,7 +109,7 @@ public class Sistema {
 		bebida.add(sucoMorango);
 		
 		Bebida cerveja = new Bebida();
-		cerveja.setCodProduto(3364d);
+		cerveja.setCodProduto(34d);
 		cerveja.setNomeProduto("Cerveja");
 		cerveja.setDescricao("Cerveja, 300ml");
 		cerveja.setPrecoUnidade(6.0);
@@ -117,17 +117,17 @@ public class Sistema {
 		bebida.add(cerveja);
 		
 		Bebida aguasemgas = new Bebida();
-		aguasemgas.setCodProduto(2474d);
-		aguasemgas.setNomeProduto("Agua mineral S/ g·s");
-		aguasemgas.setDescricao("Agua mineral sem g·s, 500ml");
+		aguasemgas.setCodProduto(27d);
+		aguasemgas.setNomeProduto("Agua mineral S/ g√°s");
+		aguasemgas.setDescricao("Agua mineral sem g√°s, 500ml");
 		aguasemgas.setPrecoUnidade(3.0);
 		
 		bebida.add(aguasemgas);
 		
 		Bebida aguacomgas = new Bebida();
-		aguacomgas.setCodProduto(2647d);
-		aguacomgas.setNomeProduto("Agua mineral C/ g·s");
-		aguacomgas.setDescricao("Agua mineral com g·s, 500ml");
+		aguacomgas.setCodProduto(26d);
+		aguacomgas.setNomeProduto("Agua mineral C/ g√°s");
+		aguacomgas.setDescricao("Agua mineral com g√°s, 500ml");
 		aguacomgas.setPrecoUnidade(3.5);
 		
 		bebida.add(aguacomgas);
@@ -161,19 +161,20 @@ public class Sistema {
 		Scanner in = new Scanner(System.in);
 		int opcao;
 		int resposta;
-		boolean cadastrandoProduto = true;
+		int codigoProduto;
+		boolean cadastrandoProdutoCarrinho = true;
 
 		do {
 			
 			System.out.println("====== MENU ====== ");
 			System.out.println("1 - CADASTRAR CLIENTE ");
-			System.out.println("2 - LISTAR COMIDAS DO CARD¡PIO");
-			System.out.println("3 - LISTAR BEBIDAS DO CARD¡PIO ");
+			System.out.println("2 - LISTAR COMIDAS DO CARD√ÅPIO");
+			System.out.println("3 - LISTAR BEBIDAS DO CARD√ÅPIO ");
 			System.out.println("4 - ADICIONAR PRODUTO NO CARRINHO ");
 			System.out.println("5 - VERIFICAR CARRINHO DE COMPRA ");
 			System.out.println("0 - SAIR DO MENU ");
 
-			System.out.println("ESCOLHA A OP«√O DESEJADA: ");
+			System.out.println("ESCOLHA A OP√á√ÉO DESEJADA: ");
 			opcao = in.nextInt();
 
 			switch(opcao) {
@@ -183,12 +184,12 @@ public class Sistema {
 					sistema.menu();
 				case 2:
 					
-					System.out.println("ABAIXO VOC  CONFERE A LISTA DE COMIDAS DO CARD¡PIO");
+					System.out.println("ABAIXO VOC√ä CONFERE A LISTA DE COMIDAS DO CARD√ÅPIO");
 					for  (Produto c : comida) {
 
-						System.out.println("Produto: " + c.getNomeProduto() + "\nCÛdigo:  " 
-					        	+ c.getCodProduto() + "\nDescriÁ„o: " + c.getDescricao() 
-					        	+ "\nPreÁo: R$" + c.getPrecoUnidade() + "\n");
+						System.out.println("Produto: " + c.getNomeProduto() + "\nC√≥digo:  " 
+					        	+ c.getCodProduto() + "\nDescri√ß√£o: " + c.getDescricao() 
+					        	+ "\nPre√ßo: R$" + c.getPrecoUnidade() + "\n");
 					}
 					
 					System.out.println("DIGITE 1 PARA RETORNAR AO MENU PRINCIPAL");
@@ -197,12 +198,12 @@ public class Sistema {
 				
 				case 3: 
 				
-					System.out.println("ABAIXO VOC  CONFERE A LISTA DE BEBIDAS DO CARD¡PIO ");
+					System.out.println("ABAIXO VOC√ä CONFERE A LISTA DE BEBIDAS DO CARD√ÅPIO ");
 					for  (Produto b : bebida) {
 
-						System.out.println("Produto: " + b.getNomeProduto() + "\nCÛdigo:  " 
-					        	+ b.getCodProduto() + "\nDescriÁ„o: " + b.getDescricao() 
-					        	+ "\nPreÁo: R$" + b.getPrecoUnidade() + "\n");
+						System.out.println("Produto: " + b.getNomeProduto() + "\nC√≥digo:  " 
+					        	+ b.getCodProduto() + "\nDescri√ß√£o: " + b.getDescricao() 
+					        	+ "\nPre√ßo: R$" + b.getPrecoUnidade() + "\n");
 					}
 					
 					System.out.println("DIGITE 1 PARA RETORNAR AO MENU PRINCIPAL");
@@ -211,17 +212,34 @@ public class Sistema {
 					
 				case 4: 
 					
-					while (cadastrandoProduto) {
+					while (cadastrandoProdutoCarrinho) {
 						
 						System.out.println("======== ADICIONAR PRODUTOS NO CARRINHO ========");
-						System.out.print("INFORME O C”DIGO DO PRODUTO: ");
-						//comida.get(input.nextDouble());
-						cc1.addListaProduto(sucoMorango);
-					
-						String continua = textInput("Confirmar cadastro (S/N) ?");
+						System.out.print("INFORME O C√ìDIGO DO PRODUTO: ");
+						codigoProduto = in.nextInt();
+						
+						if(codigoProduto == 89) {
+							cc1.addListaProduto(pizzaCalabresa);	
+						}
+						else if (codigoProduto == 87) {
+							cc1.addListaProduto(pizzaFrangoCatupiry);
+						}
+						else if (codigoProduto == 84) {
+							cc1.addListaProduto(hamburguerCarne);
+						}
+						else if (codigoProduto == 97) {
+							cc1.addListaProduto(batataFrita);
+						}
+						else if (codigoProduto == 13) {
+							cc1.addListaProduto(refrigerante1);
+						}
+						else {
+							System.out.print("O PRODUTO INFORMADO N√ÉO EST√Å DISPON√çVEL NO CARD√ÅPIO. ");
+						}
+						String continua = textInput("CONFIRMAR CADASTRO (S/N) ?");
 						
 						if (continua.equalsIgnoreCase("N")) {
-							cadastrandoProduto = false;
+							cadastrandoProdutoCarrinho = false;
 						} else if (continua.equalsIgnoreCase("s")){
 							
 						}
@@ -233,7 +251,7 @@ public class Sistema {
 
 					System.out.println("======== DADOS DO CLIENTE  ========");
 					System.out.println("Nome do Cliente: "+ cli.getNome());	
-					System.out.println("======== DESCRI«√O DO PEDIDO  ========");
+					System.out.println("======== DESCRI√á√ÉO DO PEDIDO  ========");
 					System.out.println("Nome da empresa: "+ e1.getNomeEmpresa());
 					System.out.println("Id_Pedido: "+ p1.getId_Pedido());
 					System.out.println("Codigo Carrinho: "+ cc1.getId_Carrinho());
@@ -247,7 +265,7 @@ public class Sistema {
 				default:
 					
 					if(opcao != 0)
-						System.out.println("OP«√O INV¡LIDA. TENTE NOVAMENTE (:");					
+						System.out.println("OP√á√ÉO INV√ÅLIDA. TENTE NOVAMENTE (:");					
 					break;
 
 			}
