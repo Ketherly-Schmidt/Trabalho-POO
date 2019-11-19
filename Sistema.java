@@ -86,7 +86,7 @@ public class Sistema {
 		
 		Bebida refrigerante2 = new Bebida();
 		refrigerante2.setCodProduto(16d);
-		refrigerante2.setNomeProduto("Guaraná Antarctica");
+		refrigerante2.setNomeProduto("GuaranÃ¡ Antarctica");
 		refrigerante2.setDescricao("Refrigerante guarana, 600ml");
 		refrigerante2.setPrecoUnidade(7.0);
 		
@@ -118,16 +118,16 @@ public class Sistema {
 		
 		Bebida aguasemgas = new Bebida();
 		aguasemgas.setCodProduto(27d);
-		aguasemgas.setNomeProduto("Agua mineral S/ gás");
-		aguasemgas.setDescricao("Agua mineral sem gás, 500ml");
+		aguasemgas.setNomeProduto("Agua mineral S/ gÃ¡s");
+		aguasemgas.setDescricao("Agua mineral sem gÃ¡s, 500ml");
 		aguasemgas.setPrecoUnidade(3.0);
 		
 		bebida.add(aguasemgas);
 		
 		Bebida aguacomgas = new Bebida();
 		aguacomgas.setCodProduto(26d);
-		aguacomgas.setNomeProduto("Agua mineral C/ gás");
-		aguacomgas.setDescricao("Agua mineral com gás, 500ml");
+		aguacomgas.setNomeProduto("Agua mineral C/ gÃ¡s");
+		aguacomgas.setDescricao("Agua mineral com gÃ¡s, 500ml");
 		aguacomgas.setPrecoUnidade(3.5);
 		
 		bebida.add(aguacomgas);
@@ -162,19 +162,20 @@ public class Sistema {
 		int opcao;
 		int resposta;
 		int codigoProduto;
+		int confirma;
 		boolean cadastrandoProdutoCarrinho = true;
 
 		do {
 			
 			System.out.println("====== MENU ====== ");
 			System.out.println("1 - CADASTRAR CLIENTE ");
-			System.out.println("2 - LISTAR COMIDAS DO CARDÁPIO");
-			System.out.println("3 - LISTAR BEBIDAS DO CARDÁPIO ");
+			System.out.println("2 - LISTAR COMIDAS DO CARDÃ?PIO");
+			System.out.println("3 - LISTAR BEBIDAS DO CARDÃ?PIO ");
 			System.out.println("4 - ADICIONAR PRODUTO NO CARRINHO ");
 			System.out.println("5 - VERIFICAR CARRINHO DE COMPRA ");
 			System.out.println("0 - SAIR DO MENU ");
 
-			System.out.println("ESCOLHA A OPÇÃO DESEJADA: ");
+			System.out.println("ESCOLHA A OPÃ‡ÃƒO DESEJADA: ");
 			opcao = in.nextInt();
 
 			switch(opcao) {
@@ -184,12 +185,12 @@ public class Sistema {
 					sistema.menu();
 				case 2:
 					
-					System.out.println("ABAIXO VOCÊ CONFERE A LISTA DE COMIDAS DO CARDÁPIO");
+					System.out.println("ABAIXO VOCÃŠ CONFERE A LISTA DE COMIDAS DO CARDÃ?PIO");
 					for  (Produto c : comida) {
 
-						System.out.println("Produto: " + c.getNomeProduto() + "\nCódigo:  " 
-					        	+ c.getCodProduto() + "\nDescrição: " + c.getDescricao() 
-					        	+ "\nPreço: R$" + c.getPrecoUnidade() + "\n");
+						System.out.println("Produto: " + c.getNomeProduto() + "\nCÃ³digo:  " 
+					        	+ c.getCodProduto() + "\nDescriÃ§Ã£o: " + c.getDescricao() 
+					        	+ "\nPreÃ§o: R$" + c.getPrecoUnidade() + "\n");
 					}
 					
 					System.out.println("DIGITE 1 PARA RETORNAR AO MENU PRINCIPAL");
@@ -198,12 +199,12 @@ public class Sistema {
 				
 				case 3: 
 				
-					System.out.println("ABAIXO VOCÊ CONFERE A LISTA DE BEBIDAS DO CARDÁPIO ");
+					System.out.println("ABAIXO VOCÃŠ CONFERE A LISTA DE BEBIDAS DO CARDÃ?PIO ");
 					for  (Produto b : bebida) {
 
-						System.out.println("Produto: " + b.getNomeProduto() + "\nCódigo:  " 
-					        	+ b.getCodProduto() + "\nDescrição: " + b.getDescricao() 
-					        	+ "\nPreço: R$" + b.getPrecoUnidade() + "\n");
+						System.out.println("Produto: " + b.getNomeProduto() + "\nCÃ³digo:  " 
+					        	+ b.getCodProduto() + "\nDescriÃ§Ã£o: " + b.getDescricao() 
+					        	+ "\nPreÃ§o: R$" + b.getPrecoUnidade() + "\n");
 					}
 					
 					System.out.println("DIGITE 1 PARA RETORNAR AO MENU PRINCIPAL");
@@ -215,9 +216,8 @@ public class Sistema {
 					while (cadastrandoProdutoCarrinho) {
 						
 						System.out.println("======== ADICIONAR PRODUTOS NO CARRINHO ========");
-						System.out.print("INFORME O CÓDIGO DO PRODUTO: ");
+						System.out.print("INFORME O CÃ“DIGO DO PRODUTO: ");
 						codigoProduto = in.nextInt();
-						
 						if(codigoProduto == 89) {
 							cc1.addListaProduto(pizzaCalabresa);	
 						}
@@ -232,22 +232,22 @@ public class Sistema {
 						}
 						else if (codigoProduto == 13) {
 							cc1.addListaProduto(refrigerante1);
+							
 						}
 						else if (codigoProduto == 34) {
 							cc1.addListaProduto(cerveja);
 						}
 						else {
-							System.out.print("O PRODUTO INFORMADO NÃO ESTÁ DISPONÍVEL NO CARDÁPIO. ");
+							System.out.print("O PRODUTO INFORMADO NÃƒO ESTÃ? DISPONÃ?VEL NO CARDÃ?PIO. ");
 							break;
 						}
-						String continua = textInput("CONFIRMAR CADASTRO (S/N) ?");
-						
-						if (continua.equalsIgnoreCase("N")) {
+						System.out.print("CONFIRMAR CADASTRO (1 - SIM /2 - NÃO) ?");
+						confirma = in.nextInt();
+						if (confirma == 2) {
 							cadastrandoProdutoCarrinho = false;
-						} else if (continua.equalsIgnoreCase("s")){
+						}else {
 							
 						}
-						
 					}
 					break;
 				
@@ -255,7 +255,7 @@ public class Sistema {
 
 					System.out.println("======== DADOS DO CLIENTE  ========");
 					System.out.println("Nome do Cliente: "+ cli.getNome());	
-					System.out.println("======== DESCRIÇÃO DO PEDIDO  ========");
+					System.out.println("======== DESCRIÃ‡ÃƒO DO PEDIDO  ========");
 					System.out.println("Nome da empresa: "+ e1.getNomeEmpresa());
 					System.out.println("Id_Pedido: "+ p1.getId_Pedido());
 					System.out.println("Codigo Carrinho: "+ cc1.getId_Carrinho());
@@ -269,7 +269,7 @@ public class Sistema {
 				default:
 					
 					if(opcao != 0)
-						System.out.println("OPÇÃO INVÁLIDA. TENTE NOVAMENTE (:");					
+						System.out.println("OPÃ‡ÃƒO INVÃ?LIDA. TENTE NOVAMENTE (:");					
 					break;
 
 			}
@@ -282,5 +282,6 @@ public class Sistema {
 
 	private static String textInput(String string) {
 		return null;
+
 	}
 }
