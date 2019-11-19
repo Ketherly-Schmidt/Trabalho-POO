@@ -235,6 +235,7 @@ public class Sistema {
 						}
 						else {
 							System.out.print("O PRODUTO INFORMADO NÃO ESTÁ DISPONÍVEL NO CARDÁPIO. ");
+							break;
 						}
 						String continua = textInput("CONFIRMAR CADASTRO (S/N) ?");
 						
