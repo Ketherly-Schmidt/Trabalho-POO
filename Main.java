@@ -15,7 +15,7 @@
 			new Main();
 		}
 
-		private Main() {
+		public Main() {
 			l = new Scanner(System.in);
 			execute = true;
 			listaCliente = new ArrayList<Cliente>();
@@ -25,13 +25,14 @@
 			while (execute) {
 				String opcao = menu();
 
-				if (opcao.equalsIgnoreCase("n")) {
+				if (opcao.equalsIgnoreCase("1")) {
 					cadastrar();
-				} else if (opcao.equalsIgnoreCase("l")) {
+				} else if (opcao.equalsIgnoreCase("2")) {
 					listarCadastros();
-				} else if (opcao.equalsIgnoreCase("x")) {
+				} else if (opcao.equalsIgnoreCase("3")) {
 					System.out.println("OPÇÃO INVÁLIDA. TENTE NOVAMENTE. ");
 					//System.exit(0);
+					break;
 					
 				} else {
 					System.out.println("OPÇÃO INVÁLIDA. TENTE NOVAMENTE. ");
@@ -39,11 +40,11 @@
 			}
 		}
 
-		private String menu() {
+		public String menu() {
 			System.out.println("Selecione a opção:");
-			System.out.println("N - Cadastro");
-			System.out.println("L - Mostrar Clientes Cadastros");
-			System.out.println("X - Sair");
+			System.out.println("1 - Cadastro");
+			System.out.println("2 - Mostrar Clientes Cadastros");
+			System.out.println("3 - Sair");
 			return l.nextLine(); 
 		}
 
@@ -138,7 +139,7 @@
 				}
 
 				String continua = textInput("Continuar cadastrando (S/N) ?");
-				if (continua.equalsIgnoreCase("N")) {
+				if (continua.equalsIgnoreCase("1")) {
 					cadastrando = false;
 				} else if (continua.equalsIgnoreCase("s")){
 					// se for s sai do if e volta para o inicio do while
