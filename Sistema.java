@@ -136,8 +136,8 @@ public class Sistema {
 		cc1.setId_Carrinho(254);
 		cc1.setQuantidadeItens(2);
 		cc1.setFrete(7.5d);
-		cc1.addListaProduto(sucoMorango);
-		cc1.addListaProduto(hamburguerFrango);
+		//cc1.addListaProduto(sucoMorango);
+		//cc1.addListaProduto(hamburguerFrango);
 	
 		CupomDesconto cd1 = new CupomDesconto();
 		cd1.setId_Cupom(144);
@@ -232,6 +232,9 @@ public class Sistema {
 						}
 						else if (codigoProduto == 13) {
 							cc1.addListaProduto(refrigerante1);
+						}
+						else if (codigoProduto == 34) {
+							cc1.addListaProduto(cerveja);
 						}
 						else {
 							System.out.print("O PRODUTO INFORMADO NÃO ESTÁ DISPONÍVEL NO CARDÁPIO. ");
