@@ -1,4 +1,4 @@
-package br.edu.imed;
+
 	// CLASSE DE CADASTRO DE USUARIOS...
 
 	import java.util.List;
@@ -11,7 +11,11 @@ package br.edu.imed;
 		private boolean execute;
 		private List<Cliente> listaCliente;
 
-		public Main() {
+		public static void main(String[] args) {
+			new Main();
+		}
+
+		private Main() {
 			l = new Scanner(System.in);
 			execute = true;
 			listaCliente = new ArrayList<Cliente>();
@@ -26,32 +30,31 @@ package br.edu.imed;
 				} else if (opcao.equalsIgnoreCase("l")) {
 					listarCadastros();
 				} else if (opcao.equalsIgnoreCase("x")) {
-					//execute = false;
-					System.out.println("Tchau");
-					System.exit(0);
+					System.out.println("OPÇÃO INVÁLIDA. TENTE NOVAMENTE. ");
+					//System.exit(0);
 					
 				} else {
-					System.out.println("\nOpção Inválida  !!! \n");
+					System.out.println("OPÇÃO INVÁLIDA. TENTE NOVAMENTE. ");
 				}
 			}
 		}
 
-		public String menu() {
+		private String menu() {
 			System.out.println("Selecione a opção:");
 			System.out.println("N - Cadastro");
-			System.out.println("L - Editar Cadastro");
+			System.out.println("L - Mostrar Clientes Cadastros");
 			System.out.println("X - Sair");
 			return l.nextLine(); 
 		}
 
-		public void cadastrar() {
+		private void cadastrar() {
 			boolean cadastrando = true;
 
 			while (cadastrando) {
 				System.out.println("Cadastro de Usuário");
 				Cliente novoCliente = new Cliente();
 
-               // validar o email 
+				// validar o email 
 				boolean emailValido = false;
 				while ( emailValido == false) {
 					novoCliente.setEmail(textInput("Email: "));
@@ -73,10 +76,10 @@ package br.edu.imed;
 					}
 				}
 				
-								
+
 				novoCliente.setNome(textInput("Nome:"));
 				novoCliente.setEndereco(textInput("Endereço: "));
-				
+
 				// Vereficando se o Telefone é inteiro.Fazer isso enquanto o while for verdadeiro 
 				boolean telefoneValido = false;
 				while (telefoneValido == false){ //== comparação  {
@@ -88,7 +91,7 @@ package br.edu.imed;
 						System.out.println("Numero de Telefone Inválido");
 					}
 				}
-				
+
 				/// tratamento Senha //
 				boolean SenhaValido = false; 
 				while (SenhaValido == false){ // Enquanto ele for false continua dentro do while.
@@ -100,7 +103,7 @@ package br.edu.imed;
 						System.out.println("Senha Inválido");
 					}
 				}
-				
+
 				// 
 				boolean cpfValido = false;
 				while (cpfValido == false){ //== comparação  {
@@ -112,7 +115,7 @@ package br.edu.imed;
 						System.out.println("CPF Inválido");
 					}
 				}
-				
+
 				boolean ccValido = false;
 				while (ccValido == false){ //== comparação  {
 					try {
@@ -123,7 +126,7 @@ package br.edu.imed;
 						System.out.println("Cartão de crédito Inválido");
 					}
 				}
-				
+
 				String cadastrar = textInput("Confirmar cadastro (S/N) ?");
 				if (cadastrar.equalsIgnoreCase("s")) {
 					System.out.println("Cadastro adicionado !!!");
@@ -146,7 +149,7 @@ package br.edu.imed;
 			}
 		}
 
-		public void listarCadastros() {
+		private void listarCadastros() {
 			if (listaCliente.size() == 0) {
 				System.out.println("\nNão existem cadastros !!!\n");
 			} else {
@@ -166,7 +169,7 @@ package br.edu.imed;
 			}
 		}
 
-		public String textInput(String label) {
+		private String textInput(String label) {
 			System.out.println(label);
 			return l.nextLine();
 		}
