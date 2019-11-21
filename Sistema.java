@@ -44,7 +44,7 @@ public class Sistema {
 		
 		Comida pizzaFrangoCatupiry = new Comida();
 		pizzaFrangoCatupiry.setCodProduto(87);
-		pizzaFrangoCatupiry.setNomeProduto("Pizza Frango com Catupiry");
+		pizzaFrangoCatupiry.setNomeProduto("Pizza de Frango com Catupiry");
 		pizzaFrangoCatupiry.setDescricao("Molho de tomate, frango, catupiry, oregano, queijo mussarela");
 		pizzaFrangoCatupiry.setTamanho("Familia");
 		pizzaFrangoCatupiry.setPrecoUnidade(75.0);
