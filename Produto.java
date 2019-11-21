@@ -2,7 +2,7 @@ package br.edu.imed;
 
 public class Produto {
 	
-	private Double codProduto;
+	private Integer codProduto;
 	private String nomeProduto;
 	private String descricao;
 	private Double precoUnidade;
@@ -35,7 +35,7 @@ public class Produto {
 	public Double getCodProduto() {
 		return codProduto;
 	}
-	public void setCodProduto(Double codProduto) {
+	public void setCodProduto(Integer codProduto) {
 		this.codProduto = codProduto;
 	}
 
