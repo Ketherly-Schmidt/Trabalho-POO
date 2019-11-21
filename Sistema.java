@@ -34,7 +34,7 @@ public class Sistema {
 		
 		
 		Comida pizzaCalabresa = new Comida();
-		pizzaCalabresa.setCodProduto(89d);
+		pizzaCalabresa.setCodProduto(89);
 		pizzaCalabresa.setNomeProduto("Pizza Calabresa");
 		pizzaCalabresa.setDescricao("Molho de tomate, queijo mussarela, calabresa, azeitona, oregano");
 		pizzaCalabresa.setTamanho("Familia");
@@ -43,7 +43,7 @@ public class Sistema {
 		comida.add(pizzaCalabresa);
 		
 		Comida pizzaFrangoCatupiry = new Comida();
-		pizzaFrangoCatupiry.setCodProduto(87d);
+		pizzaFrangoCatupiry.setCodProduto(87);
 		pizzaFrangoCatupiry.setNomeProduto("Pizza Frango com Catupiry");
 		pizzaFrangoCatupiry.setDescricao("Molho de tomate, frango, catupiry, oregano, queijo mussarela");
 		pizzaFrangoCatupiry.setTamanho("Familia");
@@ -52,7 +52,7 @@ public class Sistema {
 		comida.add(pizzaFrangoCatupiry);
 		
 		Comida hamburguerCarne = new Comida();
-		hamburguerCarne.setCodProduto(84d);
+		hamburguerCarne.setCodProduto(84);
 		hamburguerCarne.setNomeProduto("Hamburquer Americano");
 		hamburguerCarne.setDescricao("Carne moida, bacon, cebola, mussarela, presunto, champignon");
 		hamburguerCarne.setPrecoUnidade(22.0);
@@ -60,7 +60,7 @@ public class Sistema {
 		comida.add(hamburguerCarne);
 		
 		Comida hamburguerFrango = new Comida();
-		hamburguerFrango.setCodProduto(78d);
+		hamburguerFrango.setCodProduto(78);
 		hamburguerFrango.setNomeProduto("Hamburquer Americano de Frango");
 		hamburguerFrango.setDescricao("Frango, bacon, cebola, mussarela, presunto, champignon");
 		hamburguerFrango.setPrecoUnidade(25.0);
@@ -68,7 +68,7 @@ public class Sistema {
 		comida.add(hamburguerFrango);
 		
 		Comida batataFrita = new Comida();
-		batataFrita.setCodProduto(97d);
+		batataFrita.setCodProduto(97);
 		batataFrita.setNomeProduto("Batata Frita com cheddar");
 		batataFrita.setDescricao("Batata frita, cheddar");
 		batataFrita.setTamanho("Grande");
@@ -77,7 +77,7 @@ public class Sistema {
 		comida.add(batataFrita);
 		
 		Bebida refrigerante1 = new Bebida();
-		refrigerante1.setCodProduto(13d);
+		refrigerante1.setCodProduto(13);
 		refrigerante1.setNomeProduto("Coca-Cola");
 		refrigerante1.setDescricao("Refrigerante de cola, 600ml");
 		refrigerante1.setPrecoUnidade(7.0);
@@ -85,7 +85,7 @@ public class Sistema {
 		bebida.add(refrigerante1);
 		
 		Bebida refrigerante2 = new Bebida();
-		refrigerante2.setCodProduto(16d);
+		refrigerante2.setCodProduto(16);
 		refrigerante2.setNomeProduto("Guarana Antarctica");
 		refrigerante2.setDescricao("Refrigerante guarana, 600ml");
 		refrigerante2.setPrecoUnidade(7.0);
@@ -93,7 +93,7 @@ public class Sistema {
 		bebida.add(refrigerante2);
 		
 		Bebida sucoLaranja = new Bebida();
-		sucoLaranja.setCodProduto(33d);
+		sucoLaranja.setCodProduto(33);
 		sucoLaranja.setNomeProduto("Suco de Laranja");
 		sucoLaranja.setDescricao("Suco de laranja natural, 300ml");
 		sucoLaranja.setPrecoUnidade(5.0);
@@ -101,7 +101,7 @@ public class Sistema {
 		bebida.add(sucoLaranja);
 		
 		Bebida sucoMorango = new Bebida();
-		sucoMorango.setCodProduto(94d);
+		sucoMorango.setCodProduto(94);
 		sucoMorango.setNomeProduto("Suco de Morango");
 		sucoMorango.setDescricao("Suco de morango natural, 300ml");
 		sucoMorango.setPrecoUnidade(5.0);
@@ -109,7 +109,7 @@ public class Sistema {
 		bebida.add(sucoMorango);
 		
 		Bebida cerveja = new Bebida();
-		cerveja.setCodProduto(34d);
+		cerveja.setCodProduto(34);
 		cerveja.setNomeProduto("Cerveja");
 		cerveja.setDescricao("Cerveja, 300ml");
 		cerveja.setPrecoUnidade(6.0);
@@ -117,7 +117,7 @@ public class Sistema {
 		bebida.add(cerveja);
 		
 		Bebida aguasemgas = new Bebida();
-		aguasemgas.setCodProduto(27d);
+		aguasemgas.setCodProduto(27);
 		aguasemgas.setNomeProduto("Agua mineral S/ gas");
 		aguasemgas.setDescricao("Agua mineral sem gas, 500ml");
 		aguasemgas.setPrecoUnidade(3.0);
@@ -125,7 +125,7 @@ public class Sistema {
 		bebida.add(aguasemgas);
 		
 		Bebida aguacomgas = new Bebida();
-		aguacomgas.setCodProduto(26d);
+		aguacomgas.setCodProduto(26);
 		aguacomgas.setNomeProduto("Agua mineral C/ gas");
 		aguacomgas.setDescricao("Agua mineral com gas, 500ml");
 		aguacomgas.setPrecoUnidade(3.5);
@@ -238,10 +238,10 @@ public class Sistema {
 							cc1.addListaProduto(cerveja);
 						}
 						else {
-							System.out.print("O PRODUTO INFORMADO N√O ESTA DISPONIVEL NO CARDAPIO. ");
+							System.out.print("O PRODUTO INFORMADO N√ÉO ESTA DISPONIVEL NO CARDAPIO. ");
 							break;
 						}
-						System.out.print("CONFIRMAR CADASTRO (1 - SIM /2 - N√O) ?");
+						System.out.print("CONFIRMAR CADASTRO (1 - SIM /2 - N√ÉO) ?");
 						confirma = in.nextInt();
 						if (confirma == 2) {
 							cadastrandoProdutoCarrinho = false;
